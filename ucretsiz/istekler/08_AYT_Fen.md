@@ -3,7 +3,7 @@ Yüklediğim PDF'ler bir AYT denemesinin A ve B kitapçıklarıdır (tamamı vey
 Testte Fizik, Kimya ve Biyoloji bölümleri vardır; her soruyu kendi dersinin dosyasıyla eşle ve Ders sütununa yaz.
 
 1. Deneme adını ve kitapçıkları belirle; testteki soru sayısını sayfalardan çıkar. Eksik soru üretme.
-2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme. İki ayrı Tarih.09 bölümü varsa yalnızca birini kullan ve hangisi olduğunu belirt.
+2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme.
 3. B kitapçığındaki her soruyu aynı testte içeriğine bakarak A'daki karşılığıyla eşle; Sıra'yı A'dan al; şık harfiyle eşleme yapma. B yüklenmediyse bu adımı atla ve belirt.
 
 Sonucu `AYT_<Deneme adı>_Fen_Kazanim_Eslestirme.xlsx` olarak oluştur (boşluklar yerine alt çizgi). Sayfalar:

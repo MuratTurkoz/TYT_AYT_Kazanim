@@ -6,7 +6,7 @@
 2. `proje` klasöründeki **12 dosyanın hepsini** projenin **Files** (Dosyalar) bölümüne ekle:
    - `talimatlar.md`, `baglam.md`
    - `kaynak_turkce.md`, `kaynak_edebiyat.md`, `kaynak_matematik.md`, `kaynak_tarih.md`, `kaynak_cografya.md`, `kaynak_felsefe.md`, `kaynak_din.md`, `kaynak_fizik.md`, `kaynak_kimya.md`, `kaynak_biyoloji.md`
-3. Projede **Instructions** (Talimatlar) alanı görünüyorsa `talimatlar.md` içeriğini oraya da yapıştır. Görünmüyorsa geç.
+3. Projede **Instructions** (Talimatlar) alanı görünüyorsa `talimatlar.md` içeriğini oraya da yapıştır. Görünmüyorsa geç. Ana klasördeki `talimatlar.md` dosyasını burada kullanma; o dosya bu projede olmayan `yks_kazanimlar_v4.md` kaynağını arar.
 
 ## 2. Her test için yeni sohbet
 

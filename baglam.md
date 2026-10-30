@@ -24,7 +24,7 @@ Başarı; sorunun doğru açıklamaya ve onun Sıra'sına atanması, soru atlama
 
 ## Kullanım düzeni
 
-Bu dosya ve `yks_kazanimlar_v4.md` proje dosyası olarak yüklenir (eski `tyt_pilot_kazanimlar_v3.md` projeden kaldırılır); `talimatlar.md` içeriği Talimatlar alanına yapıştırılır. Bellek aşağıdaki bölümde tutulur. Sohbetler arasında otomatik hatırlama varsayılmaz; yerel değişiklikler projeye yeniden yüklenmeden görülmez.
+Bu dosya ve `yks_kazanimlar_v4.md` proje dosyası olarak yüklenir; `talimatlar.md` içeriği Talimatlar alanına yapıştırılır. Bellek aşağıdaki bölümde tutulur. Sohbetler arasında otomatik hatırlama varsayılmaz; yerel değişiklikler projeye yeniden yüklenmeden görülmez.
 
 ## Onaylı kararlar ve bellek
 

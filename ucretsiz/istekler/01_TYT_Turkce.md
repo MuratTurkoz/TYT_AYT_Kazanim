@@ -1,7 +1,7 @@
-Yüklediğim PDF'ler bir TYT denemesinin A ve B kitapçıklarıdır (tamamı veya yalnızca bu testin sayfaları). Yalnızca Türkçe testini işle; diğer testlere bakma. Bu testin kazanım kaynakları projedeki `kaynak_turkce.md` dosyalarıdır; başka kaynak dosyası kullanma. Projedeki talimatlar.md kurallarına uy.
+Yüklediğim PDF'ler bir TYT denemesinin A ve B kitapçıklarıdır (tamamı veya yalnızca bu testin sayfaları). Yalnızca Türkçe testini işle; diğer testlere bakma. Bu testin kazanım kaynağı projedeki `kaynak_turkce.md` dosyasıdır; başka kaynak dosyası kullanma. Projedeki talimatlar.md kurallarına uy.
 
 1. Deneme adını ve kitapçıkları belirle; testteki soru sayısını sayfalardan çıkar. Eksik soru üretme.
-2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme. İki ayrı Tarih.09 bölümü varsa yalnızca birini kullan ve hangisi olduğunu belirt.
+2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme.
 3. B kitapçığındaki her soruyu aynı testte içeriğine bakarak A'daki karşılığıyla eşle; Sıra'yı A'dan al; şık harfiyle eşleme yapma. B yüklenmediyse bu adımı atla ve belirt.
 
 Sonucu `TYT_<Deneme adı>_Turkce_Kazanim_Eslestirme.xlsx` olarak oluştur (boşluklar yerine alt çizgi). Sayfalar:

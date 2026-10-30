@@ -3,7 +3,7 @@ Yüklediğim PDF'ler bir TYT denemesinin A ve B kitapçıklarıdır (tamamı vey
 Testte Tarih, Coğrafya, Felsefe ve Din Kültürü bölümleri vardır; her soruyu kendi dersinin dosyasıyla eşle ve Ders sütununa yaz. Felsefe sorularında önce “YKS Felsefe” bölümünü kullan. Din Kültürü yerine sunulan alternatif felsefe sorularını ana sete katma; Kitapcik_Eslesme'de eşle.
 
 1. Deneme adını ve kitapçıkları belirle; testteki soru sayısını sayfalardan çıkar. Eksik soru üretme.
-2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme. İki ayrı Tarih.09 bölümü varsa yalnızca birini kullan ve hangisi olduğunu belirt.
+2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme. İki ayrı Tarih.09 bölümünden yalnızca birini kullan ve hangisi olduğunu belirt.
 3. B kitapçığındaki her soruyu aynı testte içeriğine bakarak A'daki karşılığıyla eşle; Sıra'yı A'dan al; şık harfiyle eşleme yapma. B yüklenmediyse bu adımı atla ve belirt.
 
 Sonucu `TYT_<Deneme adı>_Sosyal_Kazanim_Eslestirme.xlsx` olarak oluştur (boşluklar yerine alt çizgi). Sayfalar:

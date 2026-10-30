@@ -84,10 +84,10 @@ Test sütununa kitapçıktaki test adını yaz (ör. “Türkçe”, “Sosyal B
 Sohbette tabloyu tekrar yazma. Excel bağlantısını, test ve durum bazında adetleri ve önemli sorunları kısaca özetle. Yanıt sınırına ulaşırsan son işlenen test ve soruyu yaz; “devam” dediğimde kaldığın yerden sürdür ve en sonda Excel'i tüm testlerle oluştur.
 """
 
-ISTEK = """Yüklediğim PDF'ler bir {sinav} denemesinin A ve B kitapçıklarıdır (tamamı veya yalnızca bu testin sayfaları). Yalnızca {test} testini işle; diğer testlere bakma. Bu testin kazanım kaynakları projedeki {kaynaklar} dosyalarıdır; başka kaynak dosyası kullanma. Projedeki talimatlar.md kurallarına uy.
+ISTEK = """Yüklediğim PDF'ler bir {sinav} denemesinin A ve B kitapçıklarıdır (tamamı veya yalnızca bu testin sayfaları). Yalnızca {test} testini işle; diğer testlere bakma. {kaynak_cumle}; başka kaynak dosyası kullanma. Projedeki talimatlar.md kurallarına uy.
 {not_}
 1. Deneme adını ve kitapçıkları belirle; testteki soru sayısını sayfalardan çıkar. Eksik soru üretme.
-2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme. İki ayrı Tarih.09 bölümü varsa yalnızca birini kullan ve hangisi olduğunu belirt.
+2. A kitapçığındaki her soruyu kök, seçenekler, metin ve görselleriyle oku. Sorunun dersine ait bölümden en uygun açıklamanın Sıra'sını ver; açıklamayı aynen al. Sıra'yı boş bırakma, kaynakta olmayan Sıra üretme.{tarih_}
 3. B kitapçığındaki her soruyu aynı testte içeriğine bakarak A'daki karşılığıyla eşle; Sıra'yı A'dan al; şık harfiyle eşleme yapma. B yüklenmediyse bu adımı atla ve belirt.
 
 Sonucu `{sinav}_<Deneme adı>_{kisa}_Kazanim_Eslestirme.xlsx` olarak oluştur (boşluklar yerine alt çizgi). Sayfalar:
@@ -148,8 +148,14 @@ def main():
     print("istekler/00_Tum_Testler.md")
     for ad, sinav, test, kisa, kaynak, not_ in ISTEKLER:
         liste = ", ".join(f"`kaynak_{k}.md`" for k in kaynak)
-        metin = ISTEK.format(sinav=sinav, test=test, kisa=kisa, kaynaklar=liste,
-                             not_=f"\n{not_}\n" if not_ else "")
+        if len(kaynak) == 1:
+            kaynak_cumle = f"Bu testin kazanım kaynağı projedeki {liste} dosyasıdır"
+        else:
+            kaynak_cumle = f"Bu testin kazanım kaynakları projedeki {liste} dosyalarıdır"
+        tarih_ = (" İki ayrı Tarih.09 bölümünden yalnızca birini kullan ve hangisi olduğunu belirt."
+                  if "tarih" in kaynak else "")
+        metin = ISTEK.format(sinav=sinav, test=test, kisa=kisa, kaynak_cumle=kaynak_cumle,
+                             tarih_=tarih_, not_=f"\n{not_}\n" if not_ else "")
         (HEDEF / "istekler" / f"{ad}.md").write_text(metin, encoding="utf-8")
         print(f"istekler/{ad}.md")
     talimat = uyarla("talimatlar.md", [(
@@ -159,7 +165,7 @@ def main():
     baglam = uyarla("baglam.md", [
         ("TYT ve AYT denemelerinin kazanım kaynağı `yks_kazanimlar_v4.md` dosyasıdır.",
          "Ücretsiz kurulumda kaynak ders bazlı `kaynak_<ders>.md` dosyalarına bölünmüştür; her test ayrı sohbette işlenir ve istek metni o testin hangi ders dosyalarını kullanacağını belirtir. Bu dosyalar birlikte `yks_kazanimlar_v4.md` dosyasının tamamıdır."),
-        ("Bu dosya ve `yks_kazanimlar_v4.md` proje dosyası olarak yüklenir (eski `tyt_pilot_kazanimlar_v3.md` projeden kaldırılır); `talimatlar.md` içeriği Talimatlar alanına yapıştırılır.",
+        ("Bu dosya ve `yks_kazanimlar_v4.md` proje dosyası olarak yüklenir; `talimatlar.md` içeriği Talimatlar alanına yapıştırılır.",
          "Bu dosya, `talimatlar.md` ve tüm `kaynak_<ders>.md` dosyaları proje dosyası olarak yüklenir; Talimatlar alanı varsa `talimatlar.md` içeriği oraya da yapıştırılabilir. Sohbete yalnızca istek metni ve deneme PDF'leri eklenir."),
     ])
     (HEDEF / "proje" / "baglam.md").write_text(baglam, encoding="utf-8")

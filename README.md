@@ -29,22 +29,24 @@ Eşleştirmede yalnızca **Sıra** ve **kazanım açıklaması** kullanılır. K
    - [yks_kazanimlar_v4.md](yks_kazanimlar_v4.md): kazanım kaynağı (TYT + AYT, 16 ders, 1976 satır)
 4. **Ayarlar → Özellikler** altında dosya oluşturma / kod çalıştırma özelliğinin açık olduğundan emin ol. Excel çıktısı için bu gerekir.
 
+Her deneme için yeni sohbet aç, A ve B kitapçık PDF'lerini ekle ve [istek_tum_testler.md](istek_tum_testler.md) dosyasının içeriğini gönder.
+
 ### B) Ders bazlı dosyalarla kurulum
 
 Kaynak ders ders bölünmüştür ve her test için hazır istek metinleri vardır.
 
 1. Yeni bir proje oluştur.
 2. [ucretsiz/proje/](ucretsiz/proje/) klasöründeki **12 dosyanın tamamını** projenin **Files** bölümüne ekle (`talimatlar.md`, `baglam.md` ve 10 adet `kaynak_<ders>.md`).
-3. **Instructions** alanı varsa [ucretsiz/proje/talimatlar.md](ucretsiz/proje/talimatlar.md) içeriğini oraya da yapıştır.
+3. **Instructions** alanı varsa [ucretsiz/proje/talimatlar.md](ucretsiz/proje/talimatlar.md) içeriğini oraya da yapıştır. Kök dizindeki `talimatlar.md` dosyasını bu kurulumda **kullanma**: o dosya projede olmayan `yks_kazanimlar_v4.md` kaynağını arar.
 
 Adım adım kullanım ve sorun giderme için [ucretsiz/README.md](ucretsiz/README.md) dosyasına bak.
 
 ## Kullanım
 
-Her deneme (veya her test) için proje içinde **yeni bir sohbet** aç:
+Her deneme (veya her test) için proje içinde **yeni bir sohbet** aç ve denemenin **A** ve **B** kitapçık PDF'lerini ekle. Ardından kurulumuna uygun istek metnini kopyalayıp gönder:
 
-1. Denemenin **A** ve **B** kitapçık PDF'lerini ekle.
-2. [ucretsiz/istekler/](ucretsiz/istekler/) klasöründen ilgili istek dosyasının içeriğini kopyala ve gönder:
+- **A kurulumu:** [istek_tum_testler.md](istek_tum_testler.md). Tek seferde tüm testleri işler ve tek Excel üretir.
+- **B kurulumu:** [ucretsiz/istekler/](ucretsiz/istekler/) klasöründeki ilgili dosya:
 
 | Test | İstek dosyası |
 |---|---|
@@ -58,7 +60,7 @@ Her deneme (veya her test) için proje içinde **yeni bir sohbet** aç:
 | AYT Matematik | [07_AYT_Matematik.md](ucretsiz/istekler/07_AYT_Matematik.md) |
 | AYT Fen Bilimleri | [08_AYT_Fen.md](ucretsiz/istekler/08_AYT_Fen.md) |
 
-İstek dosyaları B kurulumundaki `kaynak_<ders>.md` adlarını kullanır. A kurulumunda istek metnini kısaltıp “kaynak: `yks_kazanimlar_v4.md`” demen yeterli.
+`ucretsiz/istekler/` dosyaları B kurulumundaki `kaynak_<ders>.md` adlarını kullanır; A kurulumunda bunları değil `istek_tum_testler.md` dosyasını kullan.
 
 Yanıt yarıda kalırsa aynı sohbete `devam` yaz. Tüm testler tek seferde bitmezse testleri ayrı sohbetlerde (01–08) işle. PDF çok büyükse [araclar/pdf_bol.py](araclar/pdf_bol.py) ile testlere böl.
 
@@ -69,6 +71,7 @@ Yanıt yarıda kalırsa aynı sohbete `devam` yaz. Tüm testler tek seferde bitm
 | [talimatlar.md](talimatlar.md) | Claude'un uyduğu eşleştirme kuralları |
 | [baglam.md](baglam.md) | Proje amacı, alan tanımları ve onaylı kararlar (K-001…) |
 | [yks_kazanimlar_v4.md](yks_kazanimlar_v4.md) | TYT/AYT kazanım kaynağı (Sıra \| açıklama) |
+| [istek_tum_testler.md](istek_tum_testler.md) | A kurulumunda sohbete gönderilen istek metni |
 | [kazanimlar/](kazanimlar/) | Tüm branşların ham kazanım aktarımı (`tum_kazanimlar.json` ve ders bazlı `.md` dosyaları) |
 | [ucretsiz/](ucretsiz/) | Ders bazlı kurulum dosyaları ve test istekleri |
 | [referans/](referans/) | Model çıktısını denetlemek için elle hazırlanmış A/B kitapçık karşılıkları |
